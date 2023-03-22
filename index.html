@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./styles/index/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./components/header.js"></script>
+    <main>
+        <section class="onescreen">
+            <div class="onescreen-wrapper">
+                <div class="right-side">
+                    <div class="btn-wrapper" onclick="goToMarketPlaceFunc()" id="onescreen-btn">
+                        <div class="btn-svg">
+                            <svg width="16" height="29" viewBox="0 0 16 29" fill="none">
+                                <path d="M8 0V28M8 28L1 20.8108M8 28L15 20.8108" stroke="#6E9C9F"/>
+                            </svg>
+                        </div>
+                        <div class="btn">Открыть магазин</div>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h1>Новые поступления в этом сезоне</h1>
+                                <div>
+                                    <span>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <h1>Что-то новенькое.<br> Мы заждались тебя.</h1>
+                                <div>
+                                    <span>Надоело искать себя в сером городе? Настало время новых идей, свежих красок и вдохновения с Womazing!</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <h1>Включай новый сезон <br> с WOMAZING</h1>
+                                <div>
+                                    <span>Мы обновили ассортимент - легендарные коллекции и новинки от отечественных дизайнеров</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="left-side">
+                    <img src="./assets/images/onescreen-image1.png" alt="">
+                    <img src="./assets/images/onescreen-image2.png" alt="">
+                    <img src="./assets/images/onescreen-image3.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="second-screen">
+            <div class="wrapper">
+                <h1 class="title">Новые коллекции</h1>
+                <div class="el-wrapper">
+                    <div class="el">
+                        <img src="./assets/images/second-screen-image1.png" alt="">
+                        <span class="title">Футболка USA</span>
+                        <div class="price-wrap">
+                            <span class="old-price">$59</span>
+                            <span class="price">$30</span>
+                        </div>
+                    </div>
+                    <div class="el">
+                        <img src="./assets/images/second-screen-image2.png" alt="">
+                        <span class="title">Купальник Glow</span>
+                        <span class="price">$24</span>
+                    </div>
+                    <div class="el">
+                        <img src="./assets/images/second-screen-image3.png" alt="">
+                        <span class="title">Свитшот Sweet Shot</span>
+                        <span class="price">$124</span>
+                    </div>
+                </div>
+                <div class="btn-wrapper" onclick="goToMarketPlaceFunc()" id="onescreen-btn">
+                    <div class="btn">Открыть магазин</div>
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="wrapper">
+                <h1 class="title">Что для нас важно</h1>
+                <div class="el-wrapper">
+                    <div class="el">
+                        <img src="./assets/images/about-us-image1.svg" alt="">
+                        <div class="wrap">
+                            <span class="title">Качество</span>
+                            <span class="subtitle">Наши профессионалы работают на лучшем оборудовании для пошива одежды беспрецедентного качества</span>
+                        </div>
+                    </div>
+                    <div class="el">
+                        <img src="./assets/images/about-us-image2.svg" alt="">
+                        <div class="wrap">
+                            <span class="title">Скорость</span>
+                            <span class="subtitle">Благодаря отлаженной системе в Womazing мы можем отшивать до 20-ти единиц продукции в наших собственных цехах</span>
+                        </div>
+                    </div>
+                    <div class="el">
+                        <img src="./assets/images/about-us-image3.svg" alt="">
+                        <div class="wrap">
+                            <span class="title">Ответственность</span>
+                            <span class="subtitle">Мы заботимся о людях и планете. Безотходное производство и комфортные условия труда - все это Womazing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dream-team">
+            <div class="wrapper">
+                <h1 class="title">Команда мечты Womazing</h1>
+                <div class="slider-and-text">
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./assets/images/dream-team-image1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./assets/images/dream-team-image2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./assets/images/dream-team-image3.png" alt=""></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="text-wrapper">
+                        <span class="title">Для каждой</span>
+                        <span class="subtitle">Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.<br><br>Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки.</span>
+                        <a href="about-brand.html">Подробнее о бренде</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="part-1">
+                <a href="" class="logo">
+                    <img src="./assets/images/logo.svg" alt="" srcset="">
+                    <span>WOMAZING</span>
+                </a>
+                <div class="text-wrap">
+                    <span>© Все права защищены</span>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Публичная оферта</a>
+                </div>
+            </div>
+            <div class="part-2">
+                <nav>
+                    <ul>
+                        <li><a class="active" href="index.html">Главная</a></li>
+                        <li><a class="deactive" href="shop.html">Магазин</a></li>
+                        <li><a class="deactive" href="about-brand.html">О бренде</a></li>
+                        <li><a class="deactive" href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="part-3">
+                <ul>
+                    <li>+7 (495) 823-54-12</li>
+                    <li>hello@womazing.com</li>
+                    <li><div class="links">
+                        <a href=""><img src="./assets/images/instagram.svg" alt=""></a>
+                        <a href=""><img src="./assets/images/facebook.svg" alt=""></a>
+                        <a href=""><img src="./assets/images/twitter.svg" alt=""></a>
+                    </div></li>
+                    <li>
+                        <div class="supported-type-of-purchase">
+                            <img src="./assets/images/visa-mastercard.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./scripts/index.js"></script>
+</body>
+</html>
