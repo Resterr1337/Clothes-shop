@@ -39,7 +39,7 @@ document.write(`
 <div class="modal-window-deactive" id="modal-window">
     <div class="state-1">
         <div class="close-modal-window">
-            <img src="../assets/images/modal-window-close-img.svg" alt="Закрыть окно" onclick="closeModalWindow()">
+            <img src="./assets/images/modal-window-close-img.svg" alt="Закрыть окно" onclick="closeModalWindow()">
         </div>
         <div class="wrapper">
             <h3 class="title">Заказ обратного звонока</h3>
