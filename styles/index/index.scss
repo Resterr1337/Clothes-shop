@@ -7,6 +7,7 @@
     transition-timing-function: ease;
 }
 @import url("../components/header.css");
+@import url("../components/footer.css");
 
 :root {
     --swiper-theme-color: #000000
@@ -244,7 +245,7 @@ main{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: 30%;
+                    width: 32.5%;
 
                     .title{
                         margin-top: 24px;
@@ -257,7 +258,7 @@ main{
                     }
 
                     img{
-                        max-width: 350px;
+                        width: 100%;
                     }
 
                     .price-wrap{
@@ -392,6 +393,8 @@ main{
         }
     }
 
+
+    
     .dream-team{
         margin-top: 5%;
         width: 100%;
@@ -427,6 +430,7 @@ main{
                 .swiper {
                     width: 50%;
                     height: 100%;
+                    margin: 0;
 
                     .swiper-slide {
                         display: flex;
@@ -440,12 +444,16 @@ main{
                             object-fit: cover;
                         }
                     }
+                    .swiper-button-prev, 
+                    .swiper-button-next{
+                        color: #FFFFFF;
+                    }
                 }
 
                 .text-wrapper{
                     display: flex;
                     flex-direction: column;
-                    width: 35%;
+                    width: 45%;
                     height: 50%;
 
                     .title{
@@ -487,141 +495,3 @@ main{
     }
 }
 
-footer{
-    margin-top: 5%;
-    width: 100%;
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #F1EADC;
-
-    .wrapper{
-        width: 70%;
-        height: 65%;
-        display: flex;
-        justify-content: space-between;
-
-        .part-1{
-            width: 25%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            .logo{
-                display: flex;
-                align-items: center;
-                color: #000000;
-                text-decoration: none;
-    
-                span{
-                    transform: translateX(11px);
-                    font-family: 'Raleway';
-                    font-style: normal;
-                    font-weight: 500;
-                    @include adaptiv-font(16, 10);
-                    line-height: 19px;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                }
-            }
-
-            .text-wrap{
-                height: 30%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-
-                span{
-                    font-family: 'Raleway';
-                    font-style: normal;
-                    font-weight: 400;
-                    @include adaptiv-font(13, 8);
-                    line-height: 140%;
-                    letter-spacing: 0.02em;
-                    color: #000000;
-                }
-
-                a{  
-                    max-width: fit-content;
-                    text-decoration: none;
-                    font-family: 'Raleway';
-                    font-style: normal;
-                    font-weight: 400;
-                    @include adaptiv-font(13, 8);
-                    line-height: 140%;
-                    letter-spacing: 0.02em;
-                    color: #000000;
-                }
-            }
-        }
-
-        .part-2{
-            width: 45%;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-
-            nav{
-                width: 100%;
-                ul{
-                    list-style: none;
-                    display: flex;
-                    justify-content: space-evenly;
-                    li{
-                        a{
-                            text-decoration: none;
-                        }
-                        .active{
-                            font-family: 'Raleway';
-                            font-style: normal;
-                            font-weight: 700;
-                            @include adaptiv-font(16, 10);
-                            line-height: 140%;
-                            letter-spacing: 0.02em;
-                            color: #6E9C9F;
-                        }
-    
-                        .deactive{
-                            font-family: 'Raleway';
-                            font-style: normal;
-                            font-weight: 500;
-                            @include adaptiv-font(16, 10);
-                            line-height: 140%;
-                            letter-spacing: 0.02em;
-                            color: #000000;
-                        }
-                    }
-                }
-            }
-        }
-
-        .part-3{
-            width: 20%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            ul{
-                height: 100%;
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                li{
-                    text-align: end;
-                    text-decoration: none;
-                    font-family: 'Raleway';
-                    font-style: normal;
-                    font-weight: 500;
-                    @include adaptiv-font(16, 10);
-                    line-height: 140%;
-                    letter-spacing: 0.02em;
-                    color: #000000;
-                }
-            }
-        }
-    }
-}

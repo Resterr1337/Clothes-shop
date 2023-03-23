@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+footer{
+    margin-top: 5%;
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1EADC;
+
+    .wrapper{
+        width: 70%;
+        height: 65%;
+        display: flex;
+        justify-content: space-between;
+
+        .part-1{
+            width: 25%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .logo{
+                display: flex;
+                align-items: center;
+                color: #000000;
+                text-decoration: none;
+    
+                span{
+                    transform: translateX(11px);
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 500;
+                    @include adaptiv-font(16, 10);
+                    line-height: 19px;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                }
+            }
+
+            .text-wrap{
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                span{
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 400;
+                    @include adaptiv-font(13, 8);
+                    line-height: 140%;
+                    letter-spacing: 0.02em;
+                    color: #000000;
+                }
+
+                a{  
+                    max-width: fit-content;
+                    text-decoration: none;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 400;
+                    @include adaptiv-font(13, 8);
+                    line-height: 140%;
+                    letter-spacing: 0.02em;
+                    color: #000000;
+                }
+            }
+        }
+
+        .part-2{
+            width: 45%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+
+            nav{
+                width: 100%;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-evenly;
+                    li{
+                        a{
+                            text-decoration: none;
+                        }
+                        .active{
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 700;
+                            @include adaptiv-font(16, 10);
+                            line-height: 140%;
+                            letter-spacing: 0.02em;
+                            color: #6E9C9F;
+                        }
+    
+                        .deactive{
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 500;
+                            @include adaptiv-font(16, 10);
+                            line-height: 140%;
+                            letter-spacing: 0.02em;
+                            color: #000000;
+                        }
+                    }
+                }
+            }
+        }
+
+        .part-3{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            ul{
+                height: 100%;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                li{
+                    text-align: end;
+                    text-decoration: none;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 500;
+                    @include adaptiv-font(16, 10);
+                    line-height: 140%;
+                    letter-spacing: 0.02em;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
