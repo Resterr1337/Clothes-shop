@@ -141,6 +141,11 @@ footer .wrapper .part-2 nav ul {
           justify-content: space-evenly;
 }
 
+footer .wrapper .part-2 nav ul li {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
 footer .wrapper .part-2 nav ul li a {
   text-decoration: none;
 }
@@ -196,6 +201,7 @@ footer .wrapper .part-3 ul {
 }
 
 footer .wrapper .part-3 ul li {
+  cursor: pointer;
   text-align: end;
   text-decoration: none;
   font-family: 'Raleway';

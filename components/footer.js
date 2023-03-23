@@ -15,10 +15,10 @@ document.write(`
         <div class="part-2">
             <nav>
                 <ul>
-                    <li><a class="active" href="index.html">Главная</a></li>
-                    <li><a class="deactive" href="shop.html">Магазин</a></li>
-                    <li><a class="deactive" href="about-brand.html">О бренде</a></li>
-                    <li><a class="deactive" href="contacts.html">Контакты</a></li>
+                    <li><a id="nav-links" class="active" href="index.html">Главная</a></li>
+                    <li><a id="nav-links" class="deactive" href="shop.html">Магазин</a></li>
+                    <li><a id="nav-links" class="deactive" href="about-brand.html">О бренде</a></li>
+                    <li><a id="nav-links" class="deactive" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>

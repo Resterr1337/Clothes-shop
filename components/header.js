@@ -7,10 +7,10 @@ document.write(`
     </a>
     <nav>
         <ul>
-            <li><a class="active" href="index.html">Главная</a></li>
-            <li><a class="deactive" href="shop.html">Магазин</a></li>
-            <li><a class="deactive" href="about-brand.html">О бренде</a></li>
-            <li><a class="deactive" href="contacts.html">Контакты</a></li>
+            <li><a id="nav-links" class="deactive" href="index.html">Главная</a></li>
+            <li><a id="nav-links" class="deactive" href="shop.html">Магазин</a></li>
+            <li><a id="nav-links" class="deactive" href="about-brand.html">О бренде</a></li>
+            <li><a id="nav-links" class="deactive" href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
     <div class="number-and-basket">                
@@ -33,6 +33,75 @@ document.write(`
         <img class="header-cart" src="./assets/images/cart.svg" alt="">
     </div>
 </div>
-</header>`)
+</header>
+<div class="modal-window-deactive">
+    <div class="state-1">
+        <div class="close-modal-window">
+            <img src="../assets/images/modal-window-close-img.svg" alt="Закрыть окно">
+        </div>
+        <div class="wrapper">
+            <h3 class="title">Заказ обратного звонока</h3>
+            <div class="input-item">
+                <input id="modal-window-input" type="text">
+                <label>Имя</label>
+            </div>
+            <div class="input-item">
+                <input id="modal-window-input" type="text">
+                <label>E-mail</label>
+            </div>
+            <div class="input-item">
+                <input id="modal-window-input" type="text">
+                <label>Телефон</label>
+            </div>
+            <button class="modal-confirm-button">Заказать звонок</button>
+        </div>
 
-window.location.href.split("/")[3]
+        <div class="wrapper2">
+            <div class="lds-dual-ring"></div>
+        </div>
+
+        <div class="wrapper3">
+            <h3 class="title">Отлично! Мы скоро вам перезвоним.</h3>
+            <button class="close-modal-window">Закрыть</button>
+        </div>
+    </div>
+</div>`
+)
+
+window.onload = () =>{
+    for( el of document.querySelectorAll("#nav-links")){
+        if (!Boolean(window.location.href.split("/")[3])){
+            if (el.href.split("/")[3] == "index.html"){
+                el.classList = "active"
+            }
+        }
+        else{
+            if(window.location.href.split("/")[3] == el.href.split("/")[3]){
+                el.classList = "active"
+            }
+            else{
+                el.classList = "deactive"
+            }
+        }
+    }
+}
+
+for (let input of document.querySelectorAll("#modal-window-input")){
+    input.oninput = () => {
+        for (let inputItem of document.querySelectorAll(".input-item")){
+            if(Boolean(inputItem.children[0].value)){
+                inputItem.children[1].classList = "is-not-empty"
+            }
+            else{
+                inputItem.children[1].classList = ""
+            }
+        }
+    }
+}
+
+
+
+// setTimeout(() => {
+//     document.querySelector('.modal-window').children[0].classList = "state-3"
+// }, 1.5 * 1000);
+
