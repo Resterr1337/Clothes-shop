@@ -14,7 +14,7 @@ document.write(`
         </ul>
     </nav>
     <div class="number-and-basket">                
-        <div class="header-number">
+        <div class="header-number" onclick="openModalWindow()">
         <div>
             <svg class="header-number-svg" width="25" height="25" viewbox="0 0 17 17" fill="none"">
             <g clip-path="url(#clip0_40162_426)">
@@ -34,26 +34,28 @@ document.write(`
     </div>
 </div>
 </header>
-<div class="modal-window-deactive">
+
+
+<div class="modal-window-deactive" id="modal-window">
     <div class="state-1">
         <div class="close-modal-window">
-            <img src="../assets/images/modal-window-close-img.svg" alt="Закрыть окно">
+            <img src="../assets/images/modal-window-close-img.svg" alt="Закрыть окно" onclick="closeModalWindow()">
         </div>
         <div class="wrapper">
             <h3 class="title">Заказ обратного звонока</h3>
             <div class="input-item">
                 <input id="modal-window-input" type="text">
-                <label>Имя</label>
+                <label id="modal-window-label">Имя</label>
             </div>
             <div class="input-item">
                 <input id="modal-window-input" type="text">
-                <label>E-mail</label>
+                <label id="modal-window-label">E-mail</label>
             </div>
             <div class="input-item">
                 <input id="modal-window-input" type="text">
-                <label>Телефон</label>
+                <label id="modal-window-label">Телефон</label>
             </div>
-            <button class="modal-confirm-button">Заказать звонок</button>
+            <button class="modal-confirm-button" onclick="goToLoadingState()">Заказать звонок</button>
         </div>
 
         <div class="wrapper2">
@@ -62,7 +64,7 @@ document.write(`
 
         <div class="wrapper3">
             <h3 class="title">Отлично! Мы скоро вам перезвоним.</h3>
-            <button class="close-modal-window">Закрыть</button>
+            <button class="close-modal-window" onclick="closeModalWindow()">Закрыть</button>
         </div>
     </div>
 </div>`
@@ -101,7 +103,36 @@ for (let input of document.querySelectorAll("#modal-window-input")){
 
 
 
-// setTimeout(() => {
-//     document.querySelector('.modal-window').children[0].classList = "state-3"
-// }, 1.5 * 1000);
+function goToLoadingState() {
+    if (
+        document.querySelectorAll("#modal-window-label")[0].classList == "is-not-empty",
+        document.querySelectorAll("#modal-window-label")[1].classList == "is-not-empty",
+        document.querySelectorAll("#modal-window-label")[2].classList == "is-not-empty"
+    ) {
+        setTimeout(() => {
+            document.querySelector('#modal-window').children[0].classList = "state-2"
+        }, 0.5 * 1000);
+        setTimeout(() => {
+            document.querySelector('#modal-window').children[0].classList = "state-3"
+        }, 1.5 * 1000);
+    }
+}
+
+function openModalWindow() {
+    document.querySelector('.modal-window-deactive').classList = "modal-window"
+}
+
+function closeModalWindow() {
+    document.querySelector('.modal-window').classList = "modal-window-deactive"
+    document.querySelector('#modal-window').children[0].classList = "state-1"
+    for(let input of document.querySelectorAll("#modal-window-input")){
+        input.value = ""
+    }
+    for(let label of document.querySelectorAll("#modal-window-label")){
+        label.classList = ""
+    }
+}
+
+
+
 

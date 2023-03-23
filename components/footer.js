@@ -24,7 +24,7 @@ document.write(`
         </div>
         <div class="part-3">
             <ul>
-                <li>+7 (495) 823-54-12</li>
+                <li onclick="openModalWindow()">+7 (495) 823-54-12</li>
                 <li>hello@womazing.com</li>
                 <li><div class="links">
                     <a href=""><img src="./assets/images/instagram.svg" alt=""></a>
