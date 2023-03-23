@@ -70,15 +70,17 @@ document.write(`
 </div>`
 )
 
+console.log((window.location.href.split("/")[window.location.href.split("/").length - 1]))
+
 window.onload = () =>{
     for( el of document.querySelectorAll("#nav-links")){
-        if (!Boolean(window.location.href.split("/")[3])){
-            if (el.href.split("/")[3] == "index.html"){
+        if (!Boolean(window.location.href.split("/")[window.location.href.split("/").length - 1])){
+            if (el.href.split("/")[el.href.split("/").length - 1] == "index.html"){
                 el.classList = "active"
             }
         }
         else{
-            if(window.location.href.split("/")[3] == el.href.split("/")[3]){
+            if(window.location.href.split("/")[window.location.href.split("/").length - 1] == el.href.split("/")[el.href.split("/").length - 1]){
                 el.classList = "active"
             }
             else{
